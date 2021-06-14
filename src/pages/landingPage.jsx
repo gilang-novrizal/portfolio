@@ -10,6 +10,7 @@ const useStyles = createUseStyles({
     display: "flex",
     flexDirection: "column",
     alignItems: "center",
+    padding: "2rem",
   },
   content: {
     maxWidth: "1240px",
@@ -18,25 +19,61 @@ const useStyles = createUseStyles({
   aboutCard: {
     background: "#333",
     display: "flex",
+    flexDirection: "column",
     marginTop: "2rem",
     borderRadius: "25px",
-    padding: "20px",
+    padding: "2rem",
   },
   profileContainer: {
-    width: "30%",
-    borderRadius: "10px",
+    width: "100%",
+    borderRadius: "25px",
     overflow: "hidden",
-    marginRight: "2rem"
+    marginRight: "2rem",
   },
   profileImage: {
     width: "100%",
   },
-  profileTextContainer:{
-      width: "70%"
+  profileTextContainer: {
+    marginTop: "1rem",
+    width: "100%",
   },
-  profileText:{
-    fontSize: "24px"
-  }
+  profileText: {
+    textAlign: "justify",
+    fontSize: "14px",
+    fontFamily: "Poppins, sans-serif"
+  },
+  title: {
+    fontSize: "32px",
+    fontFamily: "Poppins, sans-serif",
+    fontWeight: "500"
+  },
+  "@media (min-width: 768px)": {
+    aboutCard:{
+      flexDirection: "row"
+    },
+    profileContainer: {
+      width: "30%",
+    },
+    profileTextContainer: {
+      marginTop: 0,
+      width: "70%",
+    },
+    profileText: {
+      textAlign: "left",
+      fontSize: "20px",
+    },
+    title: {
+      fontSize: "72px",
+    },
+  },
+  "@media (min-width: 1024px)": {
+    title: {
+      fontSize: "72px",
+    },
+    profileText: {
+      fontSize: "24px",
+    },
+  },
 });
 
 const LandingPage = () => {
@@ -45,7 +82,7 @@ const LandingPage = () => {
     <div className={classes.root}>
       <div className={classes.content}>
         <div>
-          <h1>
+          <h1 className={classes.title}>
             Gilang Novrizal Wibowo, <br />
             Fullstack Developer
           </h1>
