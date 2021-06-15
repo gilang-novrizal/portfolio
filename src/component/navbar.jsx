@@ -2,7 +2,7 @@ import React from "react";
 import { createUseStyles } from "react-jss";
 
 const useStyles = createUseStyles({
-  root: {
+  navbar: {
     background: "#121212",
     color: "#fff",
     height: "3vh",
@@ -14,7 +14,7 @@ const useStyles = createUseStyles({
 const Navbar = () => {
   const classes = useStyles();
   return (
-    <div className={classes.root}>
+    <div className={classes.navbar}>
       <h2 >Gilnov</h2>
     </div>
   );
