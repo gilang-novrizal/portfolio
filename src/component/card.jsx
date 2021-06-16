@@ -62,6 +62,9 @@ const useStyles = createUseStyles({
     display: "flex",
     justifyContent: "center",
   },
+  link:{
+    textDecoration: "none"
+  }
 });
 
 const WorkCard = (props) => {
@@ -75,7 +78,7 @@ const WorkCard = (props) => {
       </div>
       <p className={classes.cardDescription}>{props.description}</p>
       <div className={classes.buttonContainer}>
-        <a href={props.link} target="_blank">
+        <a href={props.link} target="_blank" className={classes.link}>
           <button className={classes.button}>Explore More</button>
         </a>
       </div>
