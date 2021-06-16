@@ -5,8 +5,8 @@ const useStyles = createUseStyles({
   navbar: {
     background: "#121212",
     color: "#fff",
-    height: "3vh",
-    padding: 0
+    padding: "10px 20px",
+    display: "flex"
   },
 
 });

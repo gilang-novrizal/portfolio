@@ -5,22 +5,23 @@ const useStyles = createUseStyles({
   card: {
     marginTop: "2rem",
     fontFamily: "Poppins, sans-serif",
+    width: "100%"
   },
   cardTitle: {
     marginBottom: "0.5rem",
     fontWeight: 500,
-    fontSize: "48px",
+    fontSize: "24px",
   },
   cardYear: {
     marginBottom: "1rem",
     fontWeight: 500,
     color: "#777777",
-    fontSize: "14px",
+    fontSize: "10px",
   },
   cardDescription: {
     color: "#777777",
     fontWeight: 300,
-    fontSize: "18px",
+    fontSize: "14px",
   },
   imageContainer: {
     width: "100%",
@@ -40,7 +41,7 @@ const useStyles = createUseStyles({
     background: "#F9F9FB",
     color: "#425A70",
     fontWeight: 500,
-    fontSize: "16px",
+    fontSize: "12px",
     fontFamily: "Poppins, sans-serif",
     cursor: "pointer",
     outline: "none",
@@ -64,6 +65,20 @@ const useStyles = createUseStyles({
   },
   link:{
     textDecoration: "none"
+  },
+  "@media (min-width: 768px)": {
+    cardTitle: {
+      fontSize: "48px",
+    },
+    cardYear:{
+      fontSize: "16px"
+    },
+    button:{
+      fontSize: "16px"
+    },
+    cardDescription:{
+      fontSize: "20px"
+    }
   }
 });
 

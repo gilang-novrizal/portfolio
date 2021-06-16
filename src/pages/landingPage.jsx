@@ -90,7 +90,7 @@ const useStyles = createUseStyles({
     width: "100%",
   },
   profileText: {
-    textAlign: "justify",
+    textAlign: "left",
     fontSize: "14px",
     fontWeight: 300,
     color: "#777777",
@@ -113,7 +113,6 @@ const useStyles = createUseStyles({
       width: "60%",
     },
     profileText: {
-      textAlign: "left",
       fontSize: "20px",
     },
     title: {
