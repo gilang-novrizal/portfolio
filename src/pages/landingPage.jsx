@@ -6,6 +6,9 @@ import sinarmas from "../public/sinarmas.png";
 import kotakode_event from "../public/kotakode_event.png";
 import kotakode_story from "../public/kotakode_story.png";
 import WorkCard from "../component/card";
+import { FaGithub, FaLinkedin, FaWhatsapp } from "react-icons/fa";
+import { MdEmail } from "react-icons/md";
+import { FiChevronDown } from "react-icons/fi";
 
 const works = [
   {
@@ -73,7 +76,7 @@ const useStyles = createUseStyles({
     flexDirection: "column",
     marginTop: "2rem",
     borderRadius: "25px",
-    padding: "2rem",
+    padding: "1rem",
     marginBottom: "2rem",
   },
   profileContainer: {
@@ -91,26 +94,61 @@ const useStyles = createUseStyles({
   },
   profileText: {
     textAlign: "left",
-    fontSize: "14px",
+    fontSize: "12px",
     fontWeight: 300,
     color: "#777777",
     fontFamily: "Poppins, sans-serif",
   },
   title: {
-    fontSize: "32px",
+    fontSize: "36px",
     fontFamily: "Poppins, sans-serif",
-    fontWeight: "500",
+    fontWeight: "600",
   },
+  iconContainer: {
+    marginTop: "1rem",
+    width: "100%",
+    display: "flex",
+  },
+  icon: {
+    color: "#FFFFFF",
+    fontSize: "20px",
+    marginRight: "0.5rem"
+   
+  },
+  scrollButton: {
+    background: "none",
+    border: "none",
+    outline: "none",
+    color: "#FFFFFF",
+    fontSize: "24px",
+    cursor: "pointer",
+    display: "none",
+    scrollBehavior: "smooth",
+    "&:hover": {
+      fontSize: "26px",
+      color: "#777777",
+      transition: ".2s ease-in-out",
+    },
+  },
+  link:{
+    textDecoration: "none"
+  },
+  scrollDownIcon:{
+    marginRight: ".5rem"
+  },
+  topContent: {},
+  worksContainer: {},
+  topContentContainer: {},
   "@media (min-width: 768px)": {
     aboutCard: {
       flexDirection: "row",
     },
     profileContainer: {
-      width: "40%",
+      width: "100%",
     },
     profileTextContainer: {
       marginTop: 0,
-      width: "60%",
+      width: "100%",
     },
     profileText: {
       fontSize: "20px",
@@ -118,51 +156,135 @@ const useStyles = createUseStyles({
     title: {
       fontSize: "72px",
     },
+    worksContainer: {
+      marginTop: "10rem",
+    },
+    icon: {
+      marginRight: "1rem",
+      fontSize: "36px",
+      "&:hover":{
+        fontSize: "40px",
+        color: "#777777",
+        transition: ".2s ease-in-out"
+      }
+    },
+    topContentContainer: {
+      height: "80vh",
+      display: "flex",
+      flexDirection: "column",
+      justifyContent: "space-between",
+      alignItems: "center",
+    },
+    scrollButton:{
+      display: "flex"
+    },
+    aboutCard:{
+      padding: "2rem"
+    }
   },
   "@media (min-width: 1024px)": {
+    topContent: {
+      display: "flex",
+      marginBottom: "2rem",
+    },
     title: {
-      fontSize: "72px",
+      fontSize: "100px",
+      lineHeight: "100px",
     },
     profileText: {
-      fontSize: "24px",
+      fontSize: "20px",
     },
     profileContainer: {
-      width: "25%",
+      width: "15%",
+      height: "100%",
     },
     profileTextContainer: {
-      width: "75%",
+      width: "100%",
+    },
+    aboutCard: {
+      width: "60%",
+      margin: 0,
     },
   },
 });
 
 const LandingPage = () => {
   const classes = useStyles();
+
   return (
     <div className={classes.root}>
       <div className={classes.content}>
-        <div>
-          <h1 className={classes.title}>
-            Gilang Novrizal Wibowo, <br />
-            Fullstack Developer
-          </h1>
-        </div>
-        <div className={classes.aboutCard}>
-          <div className={classes.profileContainer}>
-            <img className={classes.profileImage} src={profile} alt="profile" />
+        <div className={classes.topContentContainer}>
+          <div className={classes.topContent}>
+            <div>
+              <h1 className={classes.title}>
+                Gilang Novrizal Wibowo, <br />
+                Fullstack Developer
+              </h1>
+            </div>
+            <div className={classes.aboutCard}>
+              {/* <div className={classes.profileContainer}>
+              <img
+                className={classes.profileImage}
+                src={profile}
+                alt="profile"
+              />
+            </div> */}
+              <div className={classes.profileTextContainer}>
+                <p className={classes.profileText}>
+                  I am a Marine Engineering graduate and had worked in a ferry
+                  ship company as an internal control officer and interior
+                  procurement staff. I had an interest in the web development
+                  world, so I decided to took a Web and Mobile Development
+                  Bootcamp at Purwadhika Startup and Coding School. Now, I have
+                  become a fullstack developer. I have a high curiosity about
+                  new technology. I am an adaptable person and always willing to
+                  learn new things.
+                </p>
+                <div className={classes.iconContainer}>
+                  <a
+                    href="https://github.com/gilang-novrizal"
+                    target="_blank"
+                    rel="noreferrer"
+                    className={classes.icon}
+                  >
+                    <FaGithub />
+                  </a>
+                  <a
+                    href="https://www.linkedin.com/in/gilangnovrizal/"
+                    target="_blank"
+                    rel="noreferrer"
+                    className={classes.icon}
+                  >
+                    <FaLinkedin />
+                  </a>
+                  <a
+                    href="mailto:gilangnw2011@gmail.com"
+                    target="_blank"
+                    rel="noreferrer"
+                    className={classes.icon}
+                  >
+                    <MdEmail />
+                  </a>
+                  <a
+                    href="https://wa.me/6281398975270"
+                    target="_blank"
+                    rel="noreferrer"
+                    className={classes.icon}
+                  >
+                    <FaWhatsapp />
+                  </a>
+                </div>
+              </div>
+            </div>
           </div>
-          <div className={classes.profileTextContainer}>
-            <p className={classes.profileText}>
-              I am a Marine Engineering graduate and had worked in a ferry ship
-              company as an internal control officer and interior procurement
-              staff. I had an interest in the web development world, so I
-              decided to took a Web and Mobile Development Bootcamp at
-              Purwadhika Startup and Coding School. Now, I have become a
-              fullstack developer. I have a high curiosity about new technology.
-              I am an adaptable person and always willing to learn new things.
-            </p>
-          </div>
+          <a href="#worksContainer" className={classes.link}>
+            <button className={classes.scrollButton}>
+              <FiChevronDown className={classes.scrollDownIcon}/> See My Works
+            </button>
+          </a>
         </div>
-        <div>
+        <div className={classes.worksContainer} id="worksContainer">
           {works.map((work) => {
             return (
               <WorkCard
