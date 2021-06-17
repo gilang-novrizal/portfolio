@@ -1,6 +1,5 @@
 import React from "react";
 import { createUseStyles } from "react-jss";
-import profile from "../public/profile.jpg";
 import etera from "../public/etera.png";
 import sinarmas from "../public/sinarmas.png";
 import kotakode_event from "../public/kotakode_event.png";
