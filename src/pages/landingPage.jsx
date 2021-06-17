@@ -142,6 +142,7 @@ const useStyles = createUseStyles({
   "@media (min-width: 768px)": {
     aboutCard: {
       flexDirection: "row",
+      padding: "2rem"
     },
     profileContainer: {
       width: "100%",
@@ -178,9 +179,6 @@ const useStyles = createUseStyles({
     scrollButton:{
       display: "flex"
     },
-    aboutCard:{
-      padding: "2rem"
-    }
   },
   "@media (min-width: 1024px)": {
     topContent: {
